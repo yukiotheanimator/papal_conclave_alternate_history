@@ -1,0 +1,103 @@
+title: Papal Conclave
+new-page: true
+tags: event
+priority: -1
+view-if: month == 5
+max-visits: 1
+set-jump: post_conclave_2025
+face-image: img/St_Peters_Basilica.jpg
+
+= Papal Conclave, [+ month : month +] [+ year +]
+
+The Papal Conlave are to be held now.
+
+- @election_algorithm: Eligible cardinal electors...
+
+@post_conclave_2025
+on-arrival: {!
+// set old results
+for (var faction of Q.electors) {
+    Q['old_' + electors + '_p'] = Q[electors + '_p'];
+    Q['change_' + electors + '_p'] = Q[electors + '_p'] - Q['old_' + electors + '_p'];
+    var sign = Q['change_' + electors + '_p'] > 0 
+                   ? '<img src="img/arrowup.png"> ' 
+                   : Q['change_' + electors + '_p'] < 0 
+                     ? '<img src="img/arrowdown.png"> ' 
+                     : '<img src="img/steady.png"> ';
+    Q['str_change_' + electors] = sign + Q['change_' + electors + '_p'];
+}
+!}
+on-display: {!
+data = [
+    {
+        "id": "europe",
+        "legend": "EUROPE",
+        "name": "europe",
+        "seats": Q.europe_p,
+    },
+    {
+        "id": "center",
+        "legend": "CENTER",
+        "name": "Center",
+        "seats": Math.round(Q.center_strength_r*2),
+    },
+    {
+        "id": "clerical",
+        "legend": "CLERICAL",
+        "name": "Clerical",
+        "seats": Math.round(Q.clerical_strength_r*2),
+    },
+    {
+        "id": "right",
+        "legend": "RIGHT",
+        "name": "Right",
+        "seats": Math.round(Q.right_strength_r*2),
+    },
+];
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+}
+!}
+go-to: leadership_menu
+
+= Election results
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!} 
+{!<tr><td>Faction</td><td>% Seat share</td><td>% Change</td><td>Seat share</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#300000'> </div> !} Labor: {!</td><td>!} [+ labor_strength_r_disp +]% {!</td><td>!} [+ str_change_labor +] {!</td><td>!}[+ labor_seats +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#707070'> </div> !} Center: {!</td><td>!} [+ center_strength_r_disp +]% {!</td><td>!} [+ str_change_center +] {!</td><td>!}[+ center_seats +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#333333'> </div> !} Clerical: {!</td><td>!} [+ clerical_strength_r_disp +]% {!</td><td>!} [+ str_change_clerical +] {!</td><td>!}[+ clerical_seats +] {!</td></tr>!}
+ 
+{!<tr><td><div class="box" style='background-color:#000030'> </div> !} Right: {!</td><td>!} [+ right_strength_r_disp +] % {!</td><td>!} [+ str_change_right +] {!</td><td>!}[+ right_seats +] {!</td></tr>!}
+{!</table>!}
+
+**Candidate of each party:**
+
+W.I.P
+
+@leadership_menu
+
+- @wip
+
+@wip
+title: Wip
+
+Wip
