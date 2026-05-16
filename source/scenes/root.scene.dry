@@ -53,7 +53,6 @@ Q.samerica_p = 17;
 Q.asia_p = 23;
 Q.oceania_p = 4;
 Q.africa_p = 17;
-
 // old composition
 Q.old_italy_p = 28;
 Q.old_europe_p = 32;
@@ -63,12 +62,13 @@ Q.old_asia_p = 10;
 Q.old_oceania_p = 1;
 Q.old_africa_p = 11;
 
-// array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
-Q.election_records = [];
-// party support records for every month
-Q.party_support_records = [];
-// inflation and unemployment records
-Q.economic_records = [];
+Q.factions = ['reformist','pragmatic','traditionalist']
+Q.reformist_strength = 30;
+Q.reformist_dissent = 0;
+Q.pragmatic_strength = 45;
+Q.pragmatic_dissent = 10;
+Q.traditionalist_strength = 25;
+Q.traditionalist_dissent = 20;
 
 // Advisors/Leaders
 Q.n_advisors = 3;
