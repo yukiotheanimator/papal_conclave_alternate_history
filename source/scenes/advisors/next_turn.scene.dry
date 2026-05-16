@@ -1,7 +1,9 @@
 title: Next Month
+new-page: true
+is-card: true
 is-pinned-card: true
 card-image: img/Hourglass.jpg
-new-page: true 
+new-page: true
 
 = Next Month
 
