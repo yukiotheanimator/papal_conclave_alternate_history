@@ -29,29 +29,47 @@ for (var faction of Q.electors) {
 !}
 on-display: {!
 data = [
+        {
+        "id": "italy",
+        "legend": "ITALY",
+        "name": "Italy",
+        "seats": Q.italy_p,
+    },
     {
         "id": "europe",
         "legend": "EUROPE",
         "name": "europe",
         "seats": Q.europe_p,
     },
-    {
-        "id": "center",
-        "legend": "CENTER",
-        "name": "Center",
-        "seats": Math.round(Q.center_strength_r*2),
+        {
+        "id": "namerica",
+        "legend": "NAMERICA",
+        "name": "North America",
+        "seats": Q.namerica_p,
     },
-    {
-        "id": "clerical",
-        "legend": "CLERICAL",
-        "name": "Clerical",
-        "seats": Math.round(Q.clerical_strength_r*2),
+        {
+        "id": "samerica",
+        "legend": "SAMERICA",
+        "name": "South America",
+        "seats": Q.samerica_p,
     },
-    {
-        "id": "right",
-        "legend": "RIGHT",
-        "name": "Right",
-        "seats": Math.round(Q.right_strength_r*2),
+        {
+        "id": "asia",
+        "legend": "ASIA",
+        "name": "Asia",
+        "seats": Q.asia_p,
+    },
+        {
+        "id": "oceania",
+        "legend": "OCEANIA",
+        "name": "Oceania",
+        "seats": Q.oceania_p,
+    },
+        {
+        "id": "africa",
+        "legend": "AFRICA",
+        "name": "Africa",
+        "seats": Q.africa_p,
     },
 ];
 
@@ -74,22 +92,32 @@ if (window && d3) {
 !}
 go-to: leadership_menu
 
-= Election results
+= Cardinal Electors
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
-{!<tr><td>Faction</td><td>% Seat share</td><td>% Change</td><td>Seat share</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#300000'> </div> !} Labor: {!</td><td>!} [+ labor_strength_r_disp +]% {!</td><td>!} [+ str_change_labor +] {!</td><td>!}[+ labor_seats +] {!</td></tr>!}
+{!<tr><td>Region</td><td>Seat</td><td>Change</tr>!}
 
-{!<tr><td><div class="box" style='background-color:#707070'> </div> !} Center: {!</td><td>!} [+ center_strength_r_disp +]% {!</td><td>!} [+ str_change_center +] {!</td><td>!}[+ center_seats +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0C2779'> </div> !} Italy: {!</td><td>!} [+ italy_p +]% {!</td><td>!} [+ str_change_italy +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#333333'> </div> !} Clerical: {!</td><td>!} [+ clerical_strength_r_disp +]% {!</td><td>!} [+ str_change_clerical +] {!</td><td>!}[+ clerical_seats +] {!</td></tr>!}
- 
-{!<tr><td><div class="box" style='background-color:#000030'> </div> !} Right: {!</td><td>!} [+ right_strength_r_disp +] % {!</td><td>!} [+ str_change_right +] {!</td><td>!}[+ right_seats +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#6767E2'> </div> !} Europe: {!</td><td>!} [+ europe_p +]% {!</td><td>!} [+ str_change_europe +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#6767E2'> </div> !} Europe: {!</td><td>!} [+ europe_p +]% {!</td><td>!} [+ str_change_europe +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#803D2C'> </div> !} North America: {!</td><td>!} [+ namerica_p +]% {!</td><td>!} [+ str_change_namerica +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#D49382'> </div> !} South America: {!</td><td>!} [+ samerica_p +]% {!</td><td>!} [+ str_change_samerica +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#F7CC0C'> </div> !} Asia: {!</td><td>!} [+ asia_p +]% {!</td><td>!} [+ str_change_asia +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E7C20C'> </div> !} Oceania: {!</td><td>!} [+ oceania_p +]% {!</td><td>!} [+ str_change_oceania +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#434343'> </div> !} Africa: {!</td><td>!} [+ africa_p +]% {!</td><td>!} [+ str_change_africa +] {!</td></tr>!}
+
 {!</table>!}
 
-**Candidate of each party:**
+**Leanings of regions:**
 
 W.I.P
 
