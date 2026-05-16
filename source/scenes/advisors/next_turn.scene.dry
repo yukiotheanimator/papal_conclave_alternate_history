@@ -1,0 +1,14 @@
+title: Next Month
+is-pinned-card: true
+card-image: img/Hourglass.jpg
+new-page: true 
+
+= Next Month
+
+Do you wish to skip this month?
+
+- @skip: Yes
+- @root: No
+
+@skip
+on-arrival: month_actions += 1
