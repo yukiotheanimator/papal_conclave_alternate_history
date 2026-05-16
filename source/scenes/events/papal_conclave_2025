@@ -1,6 +1,7 @@
 title: Papal Conclave
 new-page: true
 tags: event
+frequency: 1000
 priority: -1
 view-if: year == 2025 and month >= 5
 max-visits: 1
@@ -100,8 +101,6 @@ go-to: leadership_menu
 {!<tr><td>Region</td><td>Seat</td><td>Change</tr>!}
 
 {!<tr><td><div class="box" style='background-color:#0C2779'> </div> !} Italy: {!</td><td>!} [+ italy_p +]% {!</td><td>!} [+ str_change_italy +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#6767E2'> </div> !} Europe: {!</td><td>!} [+ europe_p +]% {!</td><td>!} [+ str_change_europe +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#6767E2'> </div> !} Europe: {!</td><td>!} [+ europe_p +]% {!</td><td>!} [+ str_change_europe +] {!</td></tr>!}
 
