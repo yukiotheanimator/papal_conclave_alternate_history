@@ -3,61 +3,8 @@ new-page: true
 on-arrival: {!
 Q.last_advisor_action = 0;
 Q.last_cabinet_action = 0;
-// make sure no stat is below 0.
-for (var c of Q.classes) {
-    for (var party of Q.parties) {
-        if (Q[c+'_'+party] < 0) {
-            Q[c+'_'+party] = 0;
-        }
-    }
-}
 
-Q.pro_republic = Math.round(Q.pro_republic);
-Q.nationalism = Math.round(Q.nationalism);
-Q.socialism = Math.round(Q.socialism);
-
-if (Q.pro_republic < 0) {
-    Q.pro_republic = 0;
-}
-if (Q.pro_republic >= 100) {
-    Q.pro_republic = 99;
-}
-// re-calculate party support
-// calculate normalized class voting for the achievements
-for (var c of Q.classes) {
-    var class_votes = 0;
-    for (var party of Q.parties) {
-        if (Q[c+'_'+party] < 0) {
-            Q[c+'_'+party] = 0;
-        }
-        class_votes += Q[c+'_'+party];
-    }
-    for (var party of Q.parties) {
-        Q[c + '_' + party + '_normalized'] = 100*Q[c+'_'+party]/class_votes;
-        Q[c + '_' + party + '_display'] = Math.round(100*Q[c+'_'+party]/class_votes);
-    }
-}
-// calculate support for each of the parties
-var total_support = 0; 
-for (var party of Q.parties) {
-    var party_support = 0;
-    for (var c of Q.classes) {
-        if (Q.old_demographics) { 
-            party_support += Q[c]*Q[c+'_'+party];
-        } else  { 
-            party_support += Q[c]*Q[c+'_'+party+'_normalized'];
-        } 
-    }
-    Q[party + '_support'] = party_support;
-    total_support += party_support; 
-}
 // 2. normalize support (fraction)
-for (var party of Q.parties) {
-    Q[party+'_normalized'] = Q[party + '_support']/total_support;
-    Q[party+'_votes'] = Math.round(Q[party+'_normalized']*100);
-    Q[party+'_votes_display'] = Math.round(Q[party+'_normalized']*100);
-}
-
 
 // set faction strength/dissent to 0
 for (var c of Q.factions) {
@@ -109,7 +56,6 @@ if (Q.month_actions >= 1) {
         if (Q.historical_mode) {
             Q.resources += 2;
         }
-    }
     }
     // decrement timers
     for (timer of Q.timers) {
