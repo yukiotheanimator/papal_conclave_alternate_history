@@ -1,0 +1,11 @@
+title: The Death of Pope Francis
+view-if: year == 2025 and month >= 4
+max-visits: 1
+on-arrival: pope = "Vacant"
+tags: event
+new-page: true
+face-image: img/PopeFrancisDies.jpg
+
+= The Death of Pope Francis
+
+placeholder
