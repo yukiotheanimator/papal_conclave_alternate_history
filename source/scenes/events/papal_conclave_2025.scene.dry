@@ -17,8 +17,9 @@ The Papal Conlave are to be held now.
 on-arrival: {!
 // set old results
 for (var faction of Q.electors) {
+    Q['old_old_' + electors + '_p'] = Q['old_' + electors + '_p']
     Q['old_' + electors + '_p'] = Q[electors + '_p'];
-    Q['change_' + electors + '_p'] = Q[electors + '_p'] - Q['old_' + electors + '_p'];
+    Q['change_' + electors + '_p'] = Q[electors + '_p'] - Q['old_old_' + electors + '_p'];
     var sign = Q['change_' + electors + '_p'] > 0 
                    ? '<img src="img/arrowup.png"> ' 
                    : Q['change_' + electors + '_p'] < 0 
