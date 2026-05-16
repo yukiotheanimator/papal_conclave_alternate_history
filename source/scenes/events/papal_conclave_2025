@@ -2,7 +2,7 @@ title: Papal Conclave
 new-page: true
 tags: event
 priority: -1
-view-if: month == 5
+view-if: year = 2025 and month = 5
 max-visits: 1
 set-jump: post_conclave_2025
 face-image: img/St_Peters_Basilica.jpg
