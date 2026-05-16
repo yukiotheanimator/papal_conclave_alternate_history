@@ -537,37 +537,26 @@ table {
 }
 
 /* Styles for parties */
-.seat.kpd {
-    fill: #8B0000;
+.seat.italy {
+    fill: #0C2779;
 }
-.seat.spd {
-    fill: #E3000F;
-    stroke: var(--border-color);
-    stroke-width: 1.5px;
+.seat.europe {
+    fill: #6767E2;
 }
-.seat.ddp {
-    fill: #DCCA4A;
+.seat.namerica {
+    fill: #803D2C;
 }
-.seat.z {
-    fill: #000;
+.seat.samerica {
+    fill: #D49382;
 }
-.seat.bvp {
-    fill: #69A2BE;
+.seat.asia {
+    fill: ##F7CC0C;
 }
-.seat.dvp {
-    fill: #D5AC27;
+.seat.oceania {
+    fill: ##E7C20C;
 }
-.seat.other {
-    fill: #909090;
-}
-.seat.dnvp {
-    fill: #3F7BC1;
-}
-.seat.nsdap {
-    fill: #954B00;
-}
-.seat.sapd {
-    fill: #C40000;
+.seat.africa {
+    fill: #434343;
 }
 
 .tooltip-text {
