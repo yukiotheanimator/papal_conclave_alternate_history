@@ -150,12 +150,12 @@ Q.march_on_berlin_timer = 0;
 
 
 // all the initial advisors are centrists.
-Q.wels_advisor = 1; // Otto Wels
-Q.muller_advisor = 1; // Hermann Müller
+Q.wels_advisor = 0; // Otto Wels
+Q.muller_advisor = 0; // Hermann Müller
 Q.muller_dead = 0;
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
 Q.crispien_advisor = 0; // Arthur Crispien
-Q.hilferding_advisor = 1; // Rudolf Hilferding
+Q.hilferding_advisor = 0; // Rudolf Hilferding
 
 // left advisors
 Q.sender_advisor = 0; // Toni Sender
@@ -240,10 +240,6 @@ audio: music/JohannStraussIIBlueDanube.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 2025
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
-
-Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
-
-
+The popes health is deteriorating, he is currently fighting pneumonia in his lungs and is also experiencing some signs of kidney failure, let's hope for his recovery.
