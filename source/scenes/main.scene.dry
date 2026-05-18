@@ -14,9 +14,10 @@ max-cards: 3
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
-[? if year = 2025 and month = 2 : Pope Francis has been hospitalised at Rome’s Gemelli Hospital for a respiratory tract infection, which he had been fighting since early this month.
-
-The infection worsened and developed into pneumonia in both lungs. He is currently experiencing an “initial, slight insufficiency” in his kidney function. ?]
+[? if year == 2025 and month == 2 :
+Pope Francis has been hospitalised at Rome's Gemelli Hospital for a respiratory tract infection, which he had been fighting since early this month.<br><br>
+The infection worsened and developed into pneumonia in both lungs. He is currently experiencing an "initial, slight insufficiency" in his kidney function.
+?]
 
 - @party
 - @govt
