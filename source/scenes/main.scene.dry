@@ -49,15 +49,15 @@ max-cards: 4
 
 @party
 title: Internal Affairs
-card-image: img/Globe.jpg
+card-image: img/St_Peters_Basilica.jpg
 is-deck: true
 
 - #party_affairs
 
 @govt
-title: Government Affairs
+title: Diplomatic Affairs
 view-if: time >= 6
-card-image: img/St_Peters_Basilica.jpg
+card-image: img/Globe.jpg
 is-deck: true
 
 - #govt_affairs
