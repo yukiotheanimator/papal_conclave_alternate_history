@@ -20,17 +20,14 @@ for (var electors of Q.electors) {
     Q['old_old_' + electors + '_p'] = Q['old_' + electors + '_p'];
     Q['old_' + electors + '_p'] = Q[electors + '_p'];
     Q['change_' + electors + '_p'] = Q[electors + '_p'] - Q['old_old_' + electors + '_p'];
-
     var sign = Q['change_' + electors + '_p'] > 0
         ? '<img src="img/arrowup.png"> '
         : Q['change_' + electors + '_p'] < 0
             ? '<img src="img/arrowdown.png"> '
             : '<img src="img/steady.png"> ';
-
     Q['str_change_' + electors] = sign + Q['change_' + electors + '_p'];
 }
 !}
-
 on-display: {!
 data = [
     {
@@ -81,7 +78,6 @@ if (window && d3) {
     var width = 500;
     var height = 500;
     var screenWidth = document.getElementById('content').offsetWidth;
-
     if (screenWidth < width - 50) {
         width = screenWidth - 50;
         height = width;
