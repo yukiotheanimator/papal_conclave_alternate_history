@@ -20,17 +20,17 @@ for (var electors of Q.electors) {
     Q['old_old_' + electors + '_p'] = Q['old_' + electors + '_p'];
     Q['old_' + electors + '_p'] = Q[electors + '_p'];
     Q['change_' + electors + '_p'] = Q[electors + '_p'] - Q['old_old_' + electors + '_p'];
-    var sign = Q['change_' + electors + '_p'] > 0
-        ? '<img src="img/arrowup.png"> '
-        : Q['change_' + electors + '_p'] < 0
-            ? '<img src="img/arrowdown.png"> '
-            : '<img src="img/steady.png"> ';
+    var sign = Q['change_' + electors + '_p'] > 0 
+                   ? '<img src="img/arrowup.png"> ' 
+                   : Q['change_' + electors + '_p'] < 0 
+                     ? '<img src="img/arrowdown.png"> ' 
+                     : '<img src="img/steady.png"> ';
     Q['str_change_' + electors] = sign + Q['change_' + electors + '_p'];
 }
 !}
 on-display: {!
 data = [
-    {
+        {
         "id": "italy",
         "legend": "ITALY",
         "name": "Italy",
@@ -39,34 +39,34 @@ data = [
     {
         "id": "europe",
         "legend": "EUROPE",
-        "name": "Europe",
+        "name": "europe",
         "seats": Math.round(Q.europe_p),
     },
-    {
+        {
         "id": "namerica",
         "legend": "NAMERICA",
         "name": "North America",
         "seats": Math.round(Q.namerica_p),
     },
-    {
+        {
         "id": "samerica",
         "legend": "SAMERICA",
         "name": "South America",
         "seats": Math.round(Q.samerica_p),
     },
-    {
+        {
         "id": "asia",
         "legend": "ASIA",
         "name": "Asia",
         "seats": Math.round(Q.asia_p),
     },
-    {
+        {
         "id": "oceania",
         "legend": "OCEANIA",
         "name": "Oceania",
         "seats": Math.round(Q.oceania_p),
     },
-    {
+        {
         "id": "africa",
         "legend": "AFRICA",
         "name": "Africa",
@@ -75,40 +75,44 @@ data = [
 ];
 
 if (window && d3) {
-    var width = 500;
+    var width = 500; 
     var height = 500;
     var screenWidth = document.getElementById('content').offsetWidth;
     if (screenWidth < width - 50) {
-        width = screenWidth - 50;
+        width = screenWidth - 50; 
         height = width;
         document.getElementById("reichstag").style.height = screenWidth/2 + "px";
-    }
+    } 
 
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
-
     d3.select("#reichstag").datum(data).call(parliament);
 }
 !}
-
 go-to: leadership_menu
 
 = Cardinal Electors
 
-{!<svg id="reichstag" style="width: 500px; height: 250px;"></svg>!}
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
-{!<table>!}
+{!<table>!} 
 {!<tr><td>Region</td><td>Seat</td><td>Change</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#0C2779'></div> Italy:</td><td>[+ italy_p +]</td><td>[+ str_change_italy +]</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#6767E2'></div> Europe:</td><td>[+ europe_p +]</td><td>[+ str_change_europe +]</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#803D2C'></div> North America:</td><td>[+ namerica_p +]</td><td>[+ str_change_namerica +]</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#D49382'></div> South America:</td><td>[+ samerica_p +]</td><td>[+ str_change_samerica +]</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#F7CC0C'></div> Asia:</td><td>[+ asia_p +]</td><td>[+ str_change_asia +]</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E7C20C'></div> Oceania:</td><td>[+ oceania_p +]</td><td>[+ str_change_oceania +]</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#434343'></div> Africa:</td><td>[+ africa_p +]</td><td>[+ str_change_africa +]</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0C2779'> </div> !} Italy: {!</td><td>!} [+ italy_p +] {!</td><td>!} [+ str_change_italy +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#6767E2'> </div> !} Europe: {!</td><td>!} [+ europe_p +] {!</td><td>!} [+ str_change_europe +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#803D2C'> </div> !} North America: {!</td><td>!} [+ namerica_p +] {!</td><td>!} [+ str_change_namerica +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#D49382'> </div> !} South America: {!</td><td>!} [+ samerica_p +] {!</td><td>!} [+ str_change_samerica +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#F7CC0C'> </div> !} Asia: {!</td><td>!} [+ asia_p +] {!</td><td>!} [+ str_change_asia +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E7C20C'> </div> !} Oceania: {!</td><td>!} [+ oceania_p +] {!</td><td>!} [+ str_change_oceania +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#434343'> </div> !} Africa: {!</td><td>!} [+ africa_p +] {!</td><td>!} [+ str_change_africa +] {!</td></tr>!}
 
 {!</table>!}
 
@@ -135,16 +139,22 @@ Postpone wow
 
 **Leanings of each region**
 
-{!<table>!}
+{!<table>!} 
 {!<tr><td>Region</td><td>Faction</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#0C2779'></div> Italy:</td><td>Mixed (Pragmatic-Traditionalist)</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#6767E2'></div> Europe:</td><td>Mixed (Pragmatic-Traditionalist)</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#803D2C'></div> North America:</td><td>Mixed</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#D49382'></div> South America:</td><td>Pragmatic</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#F7CC0C'></div> Asia:</td><td>Reformist</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E7C20C'></div> Oceania:</td><td>Reformist</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#434343'></div> Africa:</td><td>Traditionalist</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0C2779'> </div> !} Italy: {!</td><td>!} Mixed (Pragmatic-Traditionalist) {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#6767E2'> </div> !} Europe: {!</td><td>!} Mixed (Pragmatic-Traditionalist) {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#803D2C'> </div> !} North America: {!</td><td>!} Mixed {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#D49382'> </div> !} South America: {!</td><td>!} Pragmatic {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#F7CC0C'> </div> !} Asia: {!</td><td>!} Reformist {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E7C20C'> </div> !} Oceania: {!</td><td>!} Reformist {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#434343'> </div> !} Africa: {!</td><td>!} Traditionalist {!</td></tr>!}
 
 {!</table>!}
 
@@ -152,11 +162,13 @@ Postpone wow
 
 Required votes to win 89/133
 
-{!<table>!}
+{!<table>!} 
 {!<tr><td>Faction</td><td>Total Seats</td><td>Percentage</td></tr>!}
 
-{!<tr><td>Reformist</td><td>33</td><td>24.8%</td></tr>!}
-{!<tr><td>Pragmatic</td><td>52</td><td>39.1%</td></tr>!}
-{!<tr><td>Traditionalist</td><td>48</td><td>36.1%</td></tr>!}
+{!<tr><td>!} Reformist {!</td><td>!} 33 {!</td><td>!} 24.8% {!</td></tr>!}
+
+{!<tr><td>!} Pragmatic {!</td><td>!} 52 {!</td><td>!} 39.1% {!</td></tr>!}
+
+{!<tr><td>!} Traditionalist {!</td><td>!} 48 {!</td><td>!} 36.1% {!</td></tr>!}
 
 {!</table>!}
