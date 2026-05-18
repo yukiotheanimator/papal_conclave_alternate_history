@@ -239,8 +239,18 @@ Required votes to win 89/133
 - @result: The results are in...
 
 @result
-audio: out/html/music/handel_hallelujah_(silverstein).mp3
+audio: music/handel_hallelujah_(silverstein).mp3
 on-arrival: Pope = "Elected..."
 face-image: img/PopeElected.jpg
 
-Habemus Papam.
+Habemus Papam! Cardinal Robert Francis Prevost, First elected Pope in North America, A pragmatic cardinal is elected in the Chair of St. Peter succeeding Pope Francis, the world awaits his Papal Name.
+
+- @leoxiv: Pope Leo XIV
+
+@leoxiv
+face-image: img/PopeLeoXIVElected
+on-arrival: Pope = "Leo XIV"
+
+Cardinal Prevost now Pope has chosen his Papal Name to be Leo XIV, in homage to Pope Leo XIII, recognizing the need to renew Catholic social teaching to face today's new industrial revolution and the developments of artificial intelligence.
+
+Pope Leo XIV stepped onto the balcony shortly after the official announcement of his election and spoke to the crowd in St. Peter's Square.
