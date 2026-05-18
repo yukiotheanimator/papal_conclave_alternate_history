@@ -91,7 +91,6 @@ if (window && d3) {
     d3.select("#reichstag").datum(data).call(parliament);
 }
 !}
-go-to: leadership_menu
 
 = Cardinal Electors
 
