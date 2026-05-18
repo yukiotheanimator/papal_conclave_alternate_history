@@ -16,7 +16,19 @@ Pope: [+ pope +]
 
 Cardinal Electors:
 
-later
+<span style="color:#0C2779;">Italy</span>: [+ italy_p +]
+
+<span style="color:#6767E2;">Europe</span>: [+ europe_p +]
+
+<span style="color:#803D2C;">North America</span>: [+ namerica_p +]
+
+<span style="color:#D49382;">South America</span>: [+ samerica_p +]
+
+<span style="color:#F7CC0C;">Asia</span>: [+ asia_p +]
+
+<span style="color:#D2B80A;">Oceania</span>: [+ oceania_p +]
+
+<span style="color:#434343;">Africa</span>: [+ africa_p +]
 
 # = Public Opinion
 
