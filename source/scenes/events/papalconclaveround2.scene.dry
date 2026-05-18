@@ -1,0 +1,246 @@
+title: Second Day of the Papal Conclave
+new-page: true
+tags: event
+priority: -1
+view-if: year = 2025 and month = 5
+max-visits: 1
+set-jump: post_conclave_2025r2
+face-image: img/St_Peters_Basilica.jpg
+
+= Papal Conclave, [+ month : month +] [+ year +]
+
+The Second Round of the Papal Conclave are to be held now.
+
+- @election_algorithm: Eligible cardinal electors...
+
+@post_conclave_2025r2
+on-arrival: {!
+// set old results
+for (var electors of Q.electors) {
+    Q['old_old_' + electors + '_p'] = Q['old_' + electors + '_p'];
+    Q['old_' + electors + '_p'] = Q[electors + '_p'];
+    Q['change_' + electors + '_p'] = Q[electors + '_p'] - Q['old_old_' + electors + '_p'];
+    var sign = Q['change_' + electors + '_p'] > 0 
+                   ? '<img src="img/arrowup.png"> ' 
+                   : Q['change_' + electors + '_p'] < 0 
+                     ? '<img src="img/arrowdown.png"> ' 
+                     : '<img src="img/steady.png"> ';
+    Q['str_change_' + electors] = sign + Q['change_' + electors + '_p'];
+}
+!}
+on-display: {!
+data = [
+        {
+        "id": "italy",
+        "legend": "ITALY",
+        "name": "Italy",
+        "seats": Math.round(Q.italy_p),
+    },
+    {
+        "id": "europe",
+        "legend": "EUROPE",
+        "name": "europe",
+        "seats": Math.round(Q.europe_p),
+    },
+        {
+        "id": "namerica",
+        "legend": "NAMERICA",
+        "name": "North America",
+        "seats": Math.round(Q.namerica_p),
+    },
+        {
+        "id": "samerica",
+        "legend": "SAMERICA",
+        "name": "South America",
+        "seats": Math.round(Q.samerica_p),
+    },
+        {
+        "id": "asia",
+        "legend": "ASIA",
+        "name": "Asia",
+        "seats": Math.round(Q.asia_p),
+    },
+        {
+        "id": "oceania",
+        "legend": "OCEANIA",
+        "name": "Oceania",
+        "seats": Math.round(Q.oceania_p),
+    },
+        {
+        "id": "africa",
+        "legend": "AFRICA",
+        "name": "Africa",
+        "seats": Math.round(Q.africa_p),
+    },
+];
+
+if (window && d3) {
+    var width = 500; 
+    var height = 500;
+    var screenWidth = document.getElementById('content').offsetWidth;
+    if (screenWidth < width - 50) {
+        width = screenWidth - 50; 
+        height = width;
+        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+    } 
+
+    var parliament = d3.parliament();
+    parliament.width(width).height(height).innerRadiusCoef(0.4);
+    parliament.enter.fromCenter(true).smallToBig(true);
+    parliament.exit.toCenter(false).bigToSmall(true);
+    d3.select("#reichstag").datum(data).call(parliament);
+}
+!}
+
+= Cardinal Electors
+
+{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+
+{!<table>!} 
+{!<tr><td>Region</td><td>Seat</td><td>Change</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#0C2779'> </div> !} Italy: {!</td><td>!} [+ italy_p +] {!</td><td>!} [+ str_change_italy +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#6767E2'> </div> !} Europe: {!</td><td>!} [+ europe_p +] {!</td><td>!} [+ str_change_europe +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#803D2C'> </div> !} North America: {!</td><td>!} [+ namerica_p +] {!</td><td>!} [+ str_change_namerica +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#D49382'> </div> !} South America: {!</td><td>!} [+ samerica_p +] {!</td><td>!} [+ str_change_samerica +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#F7CC0C'> </div> !} Asia: {!</td><td>!} [+ asia_p +] {!</td><td>!} [+ str_change_asia +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E7C20C'> </div> !} Oceania: {!</td><td>!} [+ oceania_p +] {!</td><td>!} [+ str_change_oceania +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#434343'> </div> !} Africa: {!</td><td>!} [+ africa_p +] {!</td><td>!} [+ str_change_africa +] {!</td></tr>!}
+
+{!</table>!}
+
+- @start: Let us start the second round...
+
+@start
+face-image: img/DoorClose.jpg
+
+**Leanings of each region**
+
+{!<table>!} 
+{!<tr><td>Region</td><td>Faction</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#0C2779'> </div> !} Italy: {!</td><td>!} Mixed (Pragmatic-Traditionalist) {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#6767E2'> </div> !} Europe: {!</td><td>!} Mixed (Pragmatic-Traditionalist) {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#803D2C'> </div> !} North America: {!</td><td>!} Mixed (Reformist-Pragmatic) {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#D49382'> </div> !} South America: {!</td><td>!} Pragmatic {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#F7CC0C'> </div> !} Asia: {!</td><td>!} Reformist {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E7C20C'> </div> !} Oceania: {!</td><td>!} Mixed (Reformist-Pragmatic) {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#434343'> </div> !} Africa: {!</td><td>!} Traditionalist {!</td></tr>!}
+
+{!</table>!}
+
+**Hypothetical Summed Vote**
+
+Required votes to win 89/133
+
+{!<table>!} 
+{!<tr><td>Faction</td><td>Total Seats</td><td>Percentage</td><td>Change %</td></tr>!}
+
+{!<tr><td>!} Reformist {!</td><td>!} 40 {!</td><td>!} 30.1% {!</td><td>!} +5.3% {!</td></tr>!}
+
+{!<tr><td>!} Pragmatic {!</td><td>!} 51 {!</td><td>!} 38.3% {!</td><td>!} -0.8% {!</td></tr>!}
+
+{!<tr><td>!} Traditionalist {!</td><td>!} 42 {!</td><td>!} 31.6% {!</td><td>!} -4.5% {!</td></tr>!}
+
+{!</table>!}
+
+- @round3: No conclusion could be reached. Let us start the third round...
+
+@round3
+
+**Leanings of each region**
+
+{!<table>!} 
+{!<tr><td>Region</td><td>Faction</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#0C2779'> </div> !} Italy: {!</td><td>!} Traditionalist {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#6767E2'> </div> !} Europe: {!</td><td>!} Pragmatic {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#803D2C'> </div> !} North America: {!</td><td>!} Mixed (Reformist-Pragmatic) {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#D49382'> </div> !} South America: {!</td><td>!} Pragmatic {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#F7CC0C'> </div> !} Asia: {!</td><td>!} Mixed (Reformist-Pragmatic) {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E7C20C'> </div> !} Oceania: {!</td><td>!} Pragmatic {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#434343'> </div> !} Africa: {!</td><td>!} Traditionalist {!</td></tr>!}
+
+{!</table>!}
+
+**Hypothetical Summed Vote**
+
+Required votes to win 89/133
+
+{!<table>!} 
+{!<tr><td>Faction</td><td>Total Seats</td><td>Percentage</td><td>Change %</td></tr>!}
+
+{!<tr><td>!} Reformist {!</td><td>!} 22 {!</td><td>!} 16.6% {!</td><td>!} -13.5% {!</td></tr>!}
+
+{!<tr><td>!} Pragmatic {!</td><td>!} 80 {!</td><td>!} 60.1% {!</td><td>!} +21.8% {!</td></tr>!}
+
+{!<tr><td>!} Traditionalist {!</td><td>!} 31 {!</td><td>!} 23.3% {!</td><td>!} -8.3% {!</td></tr>!}
+
+{!</table>!}
+
+- @round4: No conclusion could be reached. Let us start the fourth round...
+
+@round4
+
+**Leanings of each region**
+
+{!<table>!} 
+{!<tr><td>Region</td><td>Faction</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#0C2779'> </div> !} Italy: {!</td><td>!} Traditionalist {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#6767E2'> </div> !} Europe: {!</td><td>!} Pragmatic {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#803D2C'> </div> !} North America: {!</td><td>!} Mixed (Reformist-Pragmatic) {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#D49382'> </div> !} South America: {!</td><td>!} Pragmatic {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#F7CC0C'> </div> !} Asia: {!</td><td>!} Pragmatic {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E7C20C'> </div> !} Oceania: {!</td><td>!} Pragmatic {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#434343'> </div> !} Africa: {!</td><td>!} Mixed (Pragmatic-Traditionalist) {!</td></tr>!}
+
+{!</table>!}
+
+**Hypothetical Summed Vote**
+
+Required votes to win 89/133
+
+{!<table>!} 
+{!<tr><td>Faction</td><td>Total Seats</td><td>Percentage</td><td>Change %</td></tr>!}
+
+{!<tr><td>!} Reformist {!</td><td>!} 10 {!</td><td>!} 7.5% {!</td><td>!} -22.6% {!</td></tr>!}
+
+{!<tr><td>!} Pragmatic {!</td><td>!} 102 {!</td><td>!} 76.7% {!</td><td>!} +38.4% {!</td></tr>!}
+
+{!<tr><td>!} Traditionalist {!</td><td>!} 21 {!</td><td>!} 15.8% {!</td><td>!} -15.8% {!</td></tr>!}
+
+{!</table>!}
+
+- @result: The results are in...
+
+@result
+audio: out/html/music/handel_hallelujah_(silverstein).mp3
+on-arrival: Pope = "Elected..."
+face-image: img/PopeElected.jpg
+
+Habemus Papam.
