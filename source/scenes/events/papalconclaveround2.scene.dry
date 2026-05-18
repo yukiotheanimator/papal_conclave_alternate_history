@@ -239,7 +239,7 @@ Required votes to win 89/133
 - @result: The results are in...
 
 @result
-audio: music/handel_hallelujah_(silverstein).mp3
+audio: music/Hallelujah.mp3
 on-arrival: Pope = "Elected..."
 face-image: img/PopeElected.jpg
 
