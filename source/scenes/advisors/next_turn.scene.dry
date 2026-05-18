@@ -1,5 +1,4 @@
 title: Next Turn
-view-if: difficulty < 0
 new-page: true
 is-card: true
 is-pinned-card: true
