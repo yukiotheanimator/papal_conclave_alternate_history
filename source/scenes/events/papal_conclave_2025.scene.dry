@@ -1,7 +1,7 @@
 title: Papal Conclave
 new-page: true
 tags: event
-priority: -1
+priority: 1
 view-if: year = 2025 and month = 5
 max-visits: 1
 set-jump: post_conclave_2025
@@ -116,15 +116,59 @@ go-to: leadership_menu
 
 {!</table>!}
 
-**Leanings of regions:**
+- @start: Let us start the conclave...
 
-W.I.P
+@start
+audio: music/VeniCreatorSpiritus-CantoGregoriano.mp3
+face-image: img/DoorClose.jpg
 
-@leadership_menu
+There are three factions of the Holy See, the reformist, the centrist or commonly referred as pragmatists and traditionalist.
 
-- @wip
+Cardinal Parolin, a reformist candidate has asked the assembled cardinal if they wish to postpone the vote until morning.
 
-@wip
-title: Wip
+- @continue: Continue the vote.
+- @postpone: Postpone the vote.
 
-Wip
+@postpone
+choose-if: resources == 0
+unavailable-subtitle: No, we will not pursue this.
+
+Postpone wow
+
+@continue
+
+**Leanings of each region**
+
+{!<table>!} 
+{!<tr><td>Region</td><td>Faction</tr>!}
+
+{!<tr><td><div class="box" style='background-color:#0C2779'> </div> !} Italy: {!</td><td>!} Mixed (Pragmatic-Traditionalist) {!</td><tr>!}
+
+{!<tr><td><div class="box" style='background-color:#6767E2'> </div> !} Europe: {!</td><td>!} Mixed (Pragmatic-Traditionalist) {!</td><tr>!}
+
+{!<tr><td><div class="box" style='background-color:#803D2C'> </div> !} North America: {!</td><td>!} Mixed {!</td><tr>!}
+
+{!<tr><td><div class="box" style='background-color:#D49382'> </div> !} South America: {!</td><td>!} Pragmatic {!</td><tr>!}
+
+{!<tr><td><div class="box" style='background-color:#F7CC0C'> </div> !} Asia: {!</td><td>!} Reformist {!</td><tr>!}
+
+{!<tr><td><div class="box" style='background-color:#E7C20C'> </div> !} Oceania: {!</td><td>!} Reformist {!</td><tr>!}
+
+{!<tr><td><div class="box" style='background-color:#434343'> </div> !} Africa: {!</td><td>!} Traditionalist {!</td><tr>!}
+
+{!</table>!}
+
+**Hypothetical Summed Vote**
+
+Required votes to win 89/133
+
+{!<table>!} 
+{!<tr><td>Faction</td><td>Total Seats</td><td>Percentage</tr>!}
+
+{!<tr><td>!} Reformist {!</td><td>!} 33 {!</td><td>!} 24.8% {!</td></tr>!}
+
+{!<tr><td>!} Pragmatic {!</td><td>!} 52 {!</td><td>!} 39.1% {!</td></tr>!}
+
+{!<tr><td>!} Traditionalist {!</td><td>!} 48 {!</td><td>!} 36.1% {!</td></tr>!}
+
+{!</table>!}
