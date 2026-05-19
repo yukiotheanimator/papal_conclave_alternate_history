@@ -9,7 +9,11 @@ card-image: img/Hourglass.jpg
 Do you wish to skip this month?
 
 - @skip: Yes
+- @3: 3 Month
 - @root: No
 
 @skip
 on-arrival: month_actions += 1
+
+@3
+on-arrival: month += 3
