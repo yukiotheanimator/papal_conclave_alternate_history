@@ -179,8 +179,12 @@ face-image: img/PopeNotElected.jpg
 
 Thousands of tourist and catholics stands disappointed as black smoke rises, perhaps tomorrow we will reach a result?
 
+- @remove: remove
+
+@remove
+
 {!<table>!} 
-{!<tr><td>**Income</td><td>**Expenses**</td></tr>!}
+{!<tr><td><b>Income</b></td><td><b>Expenses</b></td></tr>!}
 
 {!<tr><td>!} Grassroor Funding: 1{!</td><td>!} W.I.P: 1{!</td></tr>!}
 
