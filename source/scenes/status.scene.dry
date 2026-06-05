@@ -149,7 +149,7 @@ Others: [+ other_votes +]%
 <td>Peasants</td>
 <td>Unemployed</td>
 <td>Minorities</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #c31818;"><b>PSOE</b></span></td>
@@ -159,7 +159,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_psoe_normalized +]%</td>
 <td>[+ unemployed_psoe_normalized +]%</td>
 <td>[+ minorities_psoe_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #000000;"><b>CNT-FAI</b></span></td>
@@ -169,7 +169,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_cnt_fai_normalized +]%</td>
 <td>[+ unemployed_cnt_fai_normalized +]%</td>
 <td>[+ minorities_cnt_fai_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #8f1a1a;"><b>PCE</b></span></td>
@@ -179,7 +179,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_pce_normalized +]%</td>
 <td>[+ unemployed_pce_normalized +]%</td>
 <td>[+ minorities_pce_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #d66a1a;"><b>ERC</b></span></td>
@@ -189,7 +189,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_erc_normalized +]%</td>
 <td>[+ unemployed_erc_normalized +]%</td>
 <td>[+ minorities_erc_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #e98c1f;"><b>[+ izqd_rep_name +]</b></span></td>
@@ -199,7 +199,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_izqd_rep_normalized +]%</td>
 <td>[+ unemployed_izqd_rep_normalized +]%</td>
 <td>[+ minorities_izqd_rep_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #6e3aa3;"><b>PRR</b></span></td>
@@ -209,7 +209,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_prr_normalized +]%</td>
 <td>[+ unemployed_prr_normalized +]%</td>
 <td>[+ minorities_prr_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #4caf2c;"><b>PRP</b></span></td>
@@ -219,7 +219,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_prp_normalized +]%</td>
 <td>[+ unemployed_prp_normalized +]%</td>
 <td>[+ minorities_prp_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #257f22ff;"><b>PNV</b></span></td>
@@ -229,7 +229,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_pnv_normalized +]%</td>
 <td>[+ unemployed_pnv_normalized +]%</td>
 <td>[+ minorities_pnv_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #fbff00ff;"><b>LC</b></span></td>
@@ -239,7 +239,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_lig_cat_normalized +]%</td>
 <td>[+ unemployed_lig_cat_normalized +]%</td>
 <td>[+ minorities_lig_cat_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #d66a1a;"><b>PAE</b></span></td>
@@ -249,7 +249,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_pae_normalized +]%</td>
 <td>[+ unemployed_pae_normalized +]%</td>
 <td>[+ minorities_pae_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #204d91;"><b>[+ ceda_name +]</b></span></td>
@@ -259,7 +259,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_ceda_normalized +]%</td>
 <td>[+ unemployed_ceda_normalized +]%</td>
 <td>[+ minorities_ceda_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 [? if ren_esp_formed == 1:
 {!<tr>
@@ -270,7 +270,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_ren_esp_normalized +]%</td>
 <td>[+ unemployed_ren_esp_normalized +]%</td>
 <td>[+ minorities_ren_esp_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 ?]
 
 {!<tr>
@@ -281,7 +281,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_com_trad_normalized +]%</td>
 <td>[+ unemployed_com_trad_normalized +]%</td>
 <td>[+ minorities_com_trad_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!<tr>
 <td><span style="color: #5C1321;"><b>FE-JONS</b></span></td>
@@ -291,7 +291,7 @@ Others: [+ other_votes +]%
 <td>[+ rural_fe_jons_normalized +]%</td>
 <td>[+ unemployed_fe_jons_normalized +]%</td>
 <td>[+ minorities_fe_jons_normalized +]%</td>
-{!</tr>!}
+</tr>!}
 
 {!</table>!}
 
