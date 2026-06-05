@@ -143,38 +143,120 @@ Others: [+ other_votes +]%
 
 {!<tr><td>Party</td><td>Workers</td><td>Middle Class</td><td>Rural Landholders</td><td>Unlanded Peasants</td><td>Unemployed</td><td>Minorities</td></tr>!}
 
-{!<tr><td><span style="color: #c31818;"><b>PSOE</b></span></td><td>!} [+ workers_psoe_normalized +] {!</td><td>!} [+ new_middle_psoe_normalized +] {!</td><td>!} [+ landholders_psoe_normalized +] {!</td><td>!} [+ rural_psoe_normalized +] {!</td><td>!} [+ unemployed_psoe_normalized +] {!</td><td>!} [+ minorities_psoe_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #c31818;"><b>PSOE</b></span>{!</td>
+<td>!}[+ workers_psoe_normalized +]{!</td>
+<td>!}[+ new_middle_psoe_normalized +]{!</td>
+<td>!}[+ landholders_psoe_normalized +]{!</td>
+<td>!}[+ rural_psoe_normalized +]{!</td>
+<td>!}[+ unemployed_psoe_normalized +]{!</td>
+<td>!}[+ minorities_psoe_normalized +]{!</td></tr>!}
 
-{!<tr><td><span style="color: #000000;"><b>CNT-FAI</b></span></td><td>!} [+ workers_cnt_fai_normalized +] {!</td><td>!} [+ new_middle_cnt_fai_normalized +] {!</td><td>!} [+ landholders_cnt_fai_normalized +] {!</td><td>!} [+ rural_cnt_fai_normalized +] {!</td><td>!} [+ unemployed_cnt_fai_normalized +] {!</td><td>!} [+ minorities_cnt_fai_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #000000;"><b>CNT-FAI</b></span>{!</td>
+<td>!}[+ workers_cnt_fai_normalized +]{!</td>
+<td>!}[+ new_middle_cnt_fai_normalized +]{!</td>
+<td>!}[+ landholders_cnt_fai_normalized +]{!</td>
+<td>!}[+ rural_cnt_fai_normalized +]{!</td>
+<td>!}[+ unemployed_cnt_fai_normalized +]{!</td>
+<td>!}[+ minorities_cnt_fai_normalized +]{!</td></tr>!}
 
-{!<tr><td><span style="color: #8f1a1a;"><b>PCE</b></span></td><td>!} [+ workers_pce_normalized +] {!</td><td>!} [+ new_middle_pce_normalized +] {!</td><td>!} [+ landholders_pce_normalized +] {!</td><td>!} [+ rural_pce_normalized +] {!</td><td>!} [+ unemployed_pce_normalized +] {!</td><td>!} [+ minorities_pce_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #8f1a1a;"><b>PCE</b></span>{!</td>
+<td>!}[+ workers_pce_normalized +]{!</td>
+<td>!}[+ new_middle_pce_normalized +]{!</td>
+<td>!}[+ landholders_pce_normalized +]{!</td>
+<td>!}[+ rural_pce_normalized +]{!</td>
+<td>!}[+ unemployed_pce_normalized +]{!</td>
+<td>!}[+ minorities_pce_normalized +]{!</td></tr>!}
 
-{!<tr><td><span style="color: #d66a1a;"><b>ERC</b></span></td><td>!} [+ workers_erc_normalized +] {!</td><td>!} [+ new_middle_erc_normalized +] {!</td><td>!} [+ landholders_erc_normalized +] {!</td><td>!} [+ rural_erc_normalized +] {!</td><td>!} [+ unemployed_erc_normalized +] {!</td><td>!} [+ minorities_erc_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #d66a1a;"><b>ERC</b></span>{!</td>
+<td>!}[+ workers_erc_normalized +]{!</td>
+<td>!}[+ new_middle_erc_normalized +]{!</td>
+<td>!}[+ landholders_erc_normalized +]{!</td>
+<td>!}[+ rural_erc_normalized +]{!</td>
+<td>!}[+ unemployed_erc_normalized +]{!</td>
+<td>!}[+ minorities_erc_normalized +]{!</td></tr>!}
 
-{!<tr><td><span style="color: #e98c1f;"><b>[+ izqd_rep_name +]</b></span></td><td>!} [+ workers_izqd_rep_normalized +] {!</td><td>!} [+ new_middle_izqd_rep_normalized +] {!</td><td>!} [+ landholders_izqd_rep_normalized +] {!</td><td>!} [+ rural_izqd_rep_normalized +] {!</td><td>!} [+ unemployed_izqd_rep_normalized +] {!</td><td>!} [+ minorities_izqd_rep_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #e98c1f;"><b>[+ izqd_rep_name +]</b></span>{!</td>
+<td>!}[+ workers_izqd_rep_normalized +]{!</td>
+<td>!}[+ new_middle_izqd_rep_normalized +]{!</td>
+<td>!}[+ landholders_izqd_rep_normalized +]{!</td>
+<td>!}[+ rural_izqd_rep_normalized +]{!</td>
+<td>!}[+ unemployed_izqd_rep_normalized +]{!</td>
+<td>!}[+ minorities_izqd_rep_normalized +]{!</td></tr>!}
 
-{!<tr><td><span style="color: #6e3aa3;"><b>PRR</b></span></td><td>!} [+ workers_prr_normalized +] {!</td><td>!} [+ new_middle_prr_normalized +] {!</td><td>!} [+ landholders_prr_normalized +] {!</td><td>!} [+ rural_prr_normalized +] {!</td><td>!} [+ unemployed_prr_normalized +] {!</td><td>!} [+ minorities_prr_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #6e3aa3;"><b>PRR</b></span>{!</td>
+<td>!}[+ workers_prr_normalized +]{!</td>
+<td>!}[+ new_middle_prr_normalized +]{!</td>
+<td>!}[+ landholders_prr_normalized +]{!</td>
+<td>!}[+ rural_prr_normalized +]{!</td>
+<td>!}[+ unemployed_prr_normalized +]{!</td>
+<td>!}[+ minorities_prr_normalized +]{!</td></tr>!}
 
-{!<tr><td><span style="color: #4caf2c;"><b>PRP</b></span></td><td>!} [+ workers_prp_normalized +] {!</td><td>!} [+ new_middle_prp_normalized +] {!</td><td>!} [+ landholders_prp_normalized +] {!</td><td>!} [+ rural_prp_normalized +] {!</td><td>!} [+ unemployed_prp_normalized +] {!</td><td>!} [+ minorities_prp_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #4caf2c;"><b>PRP</b></span>{!</td>
+<td>!}[+ workers_prp_normalized +]{!</td>
+<td>!}[+ new_middle_prp_normalized +]{!</td>
+<td>!}[+ landholders_prp_normalized +]{!</td>
+<td>!}[+ rural_prp_normalized +]{!</td>
+<td>!}[+ unemployed_prp_normalized +]{!</td>
+<td>!}[+ minorities_prp_normalized +]{!</td></tr>!}
 
-{!<tr><td><span style="color: #257f22ff;"><b>PNV</b></span></td><td>!} [+ workers_pnv_normalized +] {!</td><td>!} [+ new_middle_pnv_normalized +] {!</td><td>!} [+ landholders_pnv_normalized +] {!</td><td>!} [+ rural_pnv_normalized +] {!</td><td>!} [+ unemployed_pnv_normalized +] {!</td><td>!} [+ minorities_pnv_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #257f22ff;"><b>PNV</b></span>{!</td>
+<td>!}[+ workers_pnv_normalized +]{!</td>
+<td>!}[+ new_middle_pnv_normalized +]{!</td>
+<td>!}[+ landholders_pnv_normalized +]{!</td>
+<td>!}[+ rural_pnv_normalized +]{!</td>
+<td>!}[+ unemployed_pnv_normalized +]{!</td>
+<td>!}[+ minorities_pnv_normalized +]{!</td></tr>!}
 
-{!<tr><td><span style="color: #fbff00ff;"><b>LC</b></span></td><td>!} [+ workers_lig_cat_normalized +] {!</td><td>!} [+ new_middle_lig_cat_normalized +] {!</td><td>!} [+ landholders_lig_cat_normalized +] {!</td><td>!} [+ rural_lig_cat_normalized +] {!</td><td>!} [+ unemployed_lig_cat_normalized +] {!</td><td>!} [+ minorities_lig_cat_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #fbff00ff;"><b>LC</b></span>{!</td>
+<td>!}[+ workers_lig_cat_normalized +]{!</td>
+<td>!}[+ new_middle_lig_cat_normalized +]{!</td>
+<td>!}[+ landholders_lig_cat_normalized +]{!</td>
+<td>!}[+ rural_lig_cat_normalized +]{!</td>
+<td>!}[+ unemployed_lig_cat_normalized +]{!</td>
+<td>!}[+ minorities_lig_cat_normalized +]{!</td></tr>!}
 
-{!<tr><td><span style="color: #d66a1a;"><b>PAE</b></span></td><td>!} [+ workers_pae_normalized +] {!</td><td>!} [+ new_middle_pae_normalized +] {!</td><td>!} [+ landholders_pae_normalized +] {!</td><td>!} [+ rural_pae_normalized +] {!</td><td>!} [+ unemployed_pae_normalized +] {!</td><td>!} [+ minorities_pae_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #d66a1a;"><b>PAE</b></span>{!</td>
+<td>!}[+ workers_pae_normalized +]{!</td>
+<td>!}[+ new_middle_pae_normalized +]{!</td>
+<td>!}[+ landholders_pae_normalized +]{!</td>
+<td>!}[+ rural_pae_normalized +]{!</td>
+<td>!}[+ unemployed_pae_normalized +]{!</td>
+<td>!}[+ minorities_pae_normalized +]{!</td></tr>!}
 
-{!<tr><td><span style="color: #204d91;"><b>[+ ceda_name +]</b></span></td><td>!} [+ workers_ceda_normalized +] {!</td><td>!} [+ new_middle_ceda_normalized +] {!</td><td>!} [+ landholders_ceda_normalized +] {!</td><td>!} [+ rural_ceda_normalized +] {!</td><td>!} [+ unemployed_ceda_normalized +] {!</td><td>!} [+ minorities_ceda_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #204d91;"><b>[+ ceda_name +]</b></span>{!</td>
+<td>!}[+ workers_ceda_normalized +]{!</td>
+<td>!}[+ new_middle_ceda_normalized +]{!</td>
+<td>!}[+ landholders_ceda_normalized +]{!</td>
+<td>!}[+ rural_ceda_normalized +]{!</td>
+<td>!}[+ unemployed_ceda_normalized +]{!</td>
+<td>!}[+ minorities_ceda_normalized +]{!</td></tr>!}
 
 [? if ren_esp_formed == 1:
-{!<tr><td><span style="color: #0B3D0B;"><b>RE</b></span></td><td>!} [+ workers_ren_esp_normalized +] {!</td><td>!} [+ new_middle_ren_esp_normalized +] {!</td><td>!} [+ landholders_ren_esp_normalized +] {!</td><td>!} [+ rural_ren_esp_normalized +] {!</td><td>!} [+ unemployed_ren_esp_normalized +] {!</td><td>!} [+ minorities_ren_esp_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #0B3D0B;"><b>RE</b></span>{!</td>
+<td>!}[+ workers_ren_esp_normalized +]{!</td>
+<td>!}[+ new_middle_ren_esp_normalized +]{!</td>
+<td>!}[+ landholders_ren_esp_normalized +]{!</td>
+<td>!}[+ rural_ren_esp_normalized +]{!</td>
+<td>!}[+ unemployed_ren_esp_normalized +]{!</td>
+<td>!}[+ minorities_ren_esp_normalized +]{!</td></tr>!}
 ?]
 
-{!<tr><td><span style="color: #B32D34;"><b>CT</b></span></td><td>!} [+ workers_com_trad_normalized +] {!</td><td>!} [+ new_middle_com_trad_normalized +] {!</td><td>!} [+ landholders_com_trad_normalized +] {!</td><td>!} [+ rural_com_trad_normalized +] {!</td><td>!} [+ unemployed_com_trad_normalized +] {!</td><td>!} [+ minorities_com_trad_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #B32D34;"><b>CT</b></span>{!</td>
+<td>!}[+ workers_com_trad_normalized +]{!</td>
+<td>!}[+ new_middle_com_trad_normalized +]{!</td>
+<td>!}[+ landholders_com_trad_normalized +]{!</td>
+<td>!}[+ rural_com_trad_normalized +]{!</td>
+<td>!}[+ unemployed_com_trad_normalized +]{!</td>
+<td>!}[+ minorities_com_trad_normalized +]{!</td></tr>!}
 
-{!<tr><td><span style="color: #5C1321;"><b>FE-JONS</b></span></td><td>!} [+ workers_fe_jons_normalized +] {!</td><td>!} [+ new_middle_fe_jons_normalized +] {!</td><td>!} [+ landholders_fe_jons_normalized +] {!</td><td>!} [+ rural_fe_jons_normalized +] {!</td><td>!} [+ unemployed_fe_jons_normalized +] {!</td><td>!} [+ minorities_fe_jons_normalized +] {!</td></tr>!}
+{!<tr><td><span style="color: #5C1321;"><b>FE-JONS</b></span>{!</td>
+<td>!}[+ workers_fe_jons_normalized +]{!</td>
+<td>!}[+ new_middle_fe_jons_normalized +]{!</td>
+<td>!}[+ landholders_fe_jons_normalized +]{!</td>
+<td>!}[+ rural_fe_jons_normalized +]{!</td>
+<td>!}[+ unemployed_fe_jons_normalized +]{!</td>
+<td>!}[+ minorities_fe_jons_normalized +]{!</td></tr>!}
 
 {!</table>!}
-
-Support for the Republic: [+ pro_republic +]%
 
 Support for the Republic: [+ pro_republic +]%
